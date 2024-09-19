@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>3D RESKA</title>
+  </head>
+  <body>
+    <div class="card">
+      <canvas id="3d-canvas" loading="lazy"></canvas>
+      <h2 style="margin-right: 18rem">pop mie</h2>
+      <p style="margin-right: 18.5rem">Rp 5,000</p>
+
+      <div class="description-section" id="description-section">
+        <p>
+          Pop Mie adalah salah satu mie instan dalam cup ter-enak se-Indonesia.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button
+          class="btn deskripsi"
+          id="deskripsi-btn"
+          aria-expanded="false"
+          aria-controls="description-section"
+        >
+          Deskripsi
+        </button>
+        <button class="btn beli" id="beli-btn">Beli Sekarang!</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div
+      class="popup"
+      id="popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+    >
+      <h2 id="popup-title">Pop Mie Berhasil Ditambahkan ke Keranjang!</h2>
+      <form id="payment-form">
+        <fieldset>
+          <legend>Form Pembayaran</legend>
+
+          <label for="name">Nama:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Masukkan Nama Anda"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Masukkan Email Anda"
+            required
+          />
+
+          <label for="card-number">Nomor Kartu Kredit:</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="Masukkan Nomor Kartu Anda"
+            required
+          />
+
+          <button type="submit" class="btn submit-btn" style="font-weight: 400">
+            Kirim Pembayaran
+          </button>
+        </fieldset>
+      </form>
+      <button class="close-btn" id="close-btn">Tutup</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
